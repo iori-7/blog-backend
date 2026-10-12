@@ -3,7 +3,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/big_event
     username: root
-    password: 123456
+    password: #自行输入
   data:
     redis:
       host: localhost
@@ -19,10 +19,9 @@ aliyun:
   oss:
     endpoint: https://oss-cn-beijing.aliyuncs.com
     bucket-name: big-even7t
-    # AccessKey 绝对不能写死在代码或配置文件里（会随代码一起泄露）。
-    # 这里只做环境变量的占位引用，启动前在系统里设置好这两个环境变量：
-    #   Windows:  set ALIBABA_CLOUD_ACCESS_KEY_ID=你的新Key
-    #             set ALIBABA_CLOUD_ACCESS_KEY_SECRET=你的新Secret
-    #   IDEA:     Run/Debug Configurations -> Environment variables 里添加
+    # AccessKey 绝对不能写死在代码或配置文件里
+    # 这里只做环境变量的占位引用，启动请前在系统里设置好这两个环境变量：
+    #   Windows:  set ALIBABA_CLOUD_ACCESS_KEY_ID=你的Key
+    #             set ALIBABA_CLOUD_ACCESS_KEY_SECRET=你的Secret
     access-key-id: ${ALIBABA_CLOUD_ACCESS_KEY_ID:}
     access-key-secret: ${ALIBABA_CLOUD_ACCESS_KEY_SECRET:}
